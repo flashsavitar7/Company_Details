@@ -18,11 +18,11 @@ class Company(models.Model):
     company_email = models.EmailField()
     phone_number = models.CharField(max_length=20)
     address_line1 = models.CharField(max_length=255)
-    address_line2 = models.CharField(max_length=255, blank=True)
+    address_line2 = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=50, choices=STATE_CHOICES)
     country = models.CharField(max_length=100)
-    website = models.URLField(blank=True)
+    website = models.URLField(blank=True, null=True)
     tax_id = models.CharField(max_length=100)
 
     def __str__(self):
