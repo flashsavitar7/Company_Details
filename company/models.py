@@ -6,14 +6,12 @@ class Company(models.Model):
         ('finance', 'Finance'),
         ('health', 'Healthcare'),
         ('education', 'Education'),
-        # Add more as needed
     ]
 
     STATE_CHOICES = [
         ('lagos', 'Lagos'),
         ('abuja', 'Abuja'),
         ('rivers', 'Rivers'),
-        # Add more Nigerian states or your relevant list
     ]
 
     industry = models.CharField(max_length=50, choices=INDUSTRY_CHOICES)
